@@ -13,9 +13,9 @@
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-streams</artifactId>
-            <version>2.5.0</version>
-
+            <version>0.11.0.0</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -30,16 +30,20 @@
             <version>1.7.25</version>
         </dependency>
 
-        <plugins>
-            <build>
-
-            </build>
-
-        </plugins>
-
-
-
     </dependencies>
-
+    <build>
+        <plugins>
+        <!--force java 8-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
